@@ -1,10 +1,10 @@
-CMPE 283 Assignment 2  
+# CMPE 283 Assignment 2  
 Name: Pavan Badarinath
-# Student ID: 014499225 
+Student ID: 014499225 
 
-Questions: 
+# Questions: 
 
-2. Describe in detail the steps you used to complete the assignment.  
+# 2. Describe in detail the steps you used to complete the assignment.  
 Answer:
 # Initial Setup:
 1. Build environment https://wiki.ubuntu.com/Kernel/BuildYourOwnKernel  
@@ -37,6 +37,6 @@ sudo apt-get install virt-manager
 4.Check output  
  
 
-3. Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?
-Answer:
+# 3. Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?
+# Answer:
 No, the number of exits does not increase at stable rate. There are other VM instructions, so exits are performed during certain VM operations, such as RDRAND, EPT violation, RDTSCP, I/O instructions,  etc. The total number of exits was approximately 156,345.
