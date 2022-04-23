@@ -2,13 +2,13 @@ CMPE 283 Assignment 1
 Name: Pavan Badarinath 
 Student ID : 014499225  
 
-Question: Describe in detail the steps you used to complete the assignment.
-Answer:
+# Question: Describe in detail the steps you used to complete the assignment.
+# Answer:
 In this assignment we need to create a Linux kernel module that will query multiple MSRs to determine various
 virtualization features that is available in our CPU. This module will report all different kinds of
 features it discovers through a system message log.
 
-Implementation steps:
+# Implementation steps:
 1. Install Oracle VM VirtualBox and select Ubuntu.  
 
 2. Download the Linux kernel source code:  
