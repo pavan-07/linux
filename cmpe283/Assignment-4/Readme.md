@@ -8,8 +8,7 @@ This assignment is to illustrate the difference in performance when using nested
 ## Questions: 
 
 ### 2. Include a sample of your print of exit count output from dmesg from “with ept” and “without ept”.
- The output are displayed in the appendix of this file.  
- see:
+ The output are displayed in the text files below:  
 https://github.com/pavan-07/linux/blob/master/cmpe283/Assignment-4/assignment4_nested%5B1%5D.txt
 https://github.com/pavan-07/linux/blob/master/cmpe283/Assignment-4/assignment4_shadow%5B1%5D.txt
  
