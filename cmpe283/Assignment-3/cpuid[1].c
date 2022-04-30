@@ -32,10 +32,10 @@ u32 kvm_cpu_caps[NCAPINTS] __read_mostly;
 EXPORT_SYMBOL_GPL(kvm_cpu_caps);
 
 // CMPE283
-atomic64_t exit_counters = ATOMIC64_INIT(0);
-EXPORT_SYMBOL(exit_counters);
-atomic64_t exit_duration = ATOMIC64_INIT(0);
-EXPORT_SYMBOL(exit_duration);
+atomic64_t numberofexitcounters = ATOMIC64_INIT(0);
+EXPORT_SYMBOL(numberofexitcounters);
+atomic64_t totalexitduration = ATOMIC64_INIT(0);
+EXPORT_SYMBOL(totalexitduration);
 
 atomic64_t individual_exit_counter[69]= {0};
 EXPORT_SYMBOL(individual_exit_counter);
@@ -1152,15 +1152,15 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 	if(eax == 0x4fffffff) {
 		printk(KERN_INFO "Update the registers");
 		kvm_cpuid(vcpu, &eax, &ebx, &ecx, &edx, true);
-		printk(KERN_INFO "Update exit counters EAX=%llu", atomic64_read(&exit_counters));
-		eax = atomic64_read(&exit_counters);
+		printk(KERN_INFO "Update exit counters EAX=%llu", atomic64_read(&numberofexitcounters));
+		eax = atomic64_read(&numberofexitcounters);
 		printk(KERN_INFO "Total number of exits in eax=%u", eax);
 		// High 32 bits of the total time spent in %ebx
-		printk(KERN_INFO "Exit duration=%llu", atomic64_read(&exit_duration));
-		ebx = (atomic64_read(&exit_duration) >> 32);
+		printk(KERN_INFO "Exit duration=%llu", atomic64_read(&totalexitduration));
+		ebx = (atomic64_read(&totalexitduration) >> 32);
 		printk(KERN_INFO "Updated ebx exit duration=%u", ebx);
 		// Low 32 bits of the total time spent in %ecx
-		ecx = (atomic64_read(&exit_duration) & 0xFFFFFFFF);
+		ecx = (atomic64_read(&totalexitduration) & 0xFFFFFFFF);
 		printk(KERN_INFO "updated low 32 bits in ecx=%u", ecx);
 	} else if (eax == 0x4ffffffe) {
 		uint32_t specific_count;
