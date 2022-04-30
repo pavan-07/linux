@@ -35,8 +35,4 @@ sudo apt-get install virt-manager
 2.Install gcc https://linuxize.com/post/how-to-install-gcc-compiler-on-ubuntu-18-04/  
 3.Compile test file: gcc test.c  
 4.Check output  
- 
 
-# 3. Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?
-# Answer:
-No, the number of exits does not increase at stable rate. There are other VM instructions, so exits are performed during certain VM operations, such as RDRAND, EPT violation, RDTSCP, I/O instructions,  etc. The total number of exits was approximately 156,345.
