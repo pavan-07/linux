@@ -65,7 +65,7 @@ sudo apt-get install virt-manager
 4.Check output  
 #### Test
 Start the nested VM and verify CPUID exit conditions using the test_assignment3.c file.
-1. First run: result detail at : https://github.com/Qinwang1993/CMPE-283/blob/master/Assignment_3/first_run.txt
+1. First run: result detail at :https://github.com/pavan-07/linux/blob/master/cmpe283/Assignment-3/first_run.txt
 
 2. Second run: result detail at : https://github.com/Qinwang1993/CMPE-283/blob/master/Assignment_3/second_run.txt
 
